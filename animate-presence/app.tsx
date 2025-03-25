@@ -14,7 +14,7 @@ export default function PresenceExample() {
 
   return (
     <div>
-      <button onClick={() => setOpen(true)}>open</button>
+      <button onClick={() => setOpen((prev) => !prev)}>open</button>
       <Presence present={!!open}>
         <div
           data-state={open === 'init' ? 'init' : open ? 'open' : 'closed'}
